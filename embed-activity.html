@@ -1,0 +1,22 @@
+<iframe onload="focusOnArea()" id="myFrame" src="https://learn.sydneytafe.edu.au/mod/questionnaire/view.php?id=1062333" height="1" width="1" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+
+<script>
+function focusOnArea() {
+var myIframe = document.getElementById('myFrame');
+var insideIframe = myIframe.contentWindow.document;
+var topNav = insideIframe.getElementsByTagName("nav")[0];
+var target = insideIframe.querySelectorAll('[role="main"]')[0];  
+
+// var target = insideIframe.getElementById("region-main");
+var savTop = parent.document.documentElement.scrollTop;
+
+myIframe.width = 100 + '%';
+myIframe.height = target.clientHeight + 'px';
+// myIframe.width = target.clientWidth + 'px';
+target.scrollIntoView(true);
+parent.document.documentElement.scrollTop = savTop;
+topNav.style.display = "none";
+    
+}
+
+</script>

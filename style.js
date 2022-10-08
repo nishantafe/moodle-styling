@@ -1,4 +1,4 @@
-<!--V 1.1-->
+<!--V 1.2-->
 <p>
 <script type="text/javascript">// <![CDATA[
   
@@ -77,6 +77,16 @@ for (var i = 0; i < ex.length; i++) {
 	ex[i].style.fontSize = "large";
 	ex[i].style.fontWeight = "bold";
 	ex[i].style.color = "#5097c9";
+}
+
+var ex = document.getElementsByTagName('ul');
+for (var i = 0; i < ex.length; i++) {
+	ex[i].style.marginBottom = "1rem";
+}
+
+var ex = document.getElementsByTagName('ol');
+for (var i = 0; i < ex.length; i++) {
+	ex[i].style.marginBottom = "1rem";
 }
 
 var ex = document.getElementsByClassName('activity');
